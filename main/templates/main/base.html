@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="icon" sizes='192x192' href="{% static 'images/Devi!-logo.svg' %}">
+
+    <title>Michel.Dev</title>
+</head>
+<body> 
+
+    <input type="checkbox" id="menu-toggle" hidden>
+
+    <nav class="navbar">
+        <span class="logo-name"><h2 id="michel">Michel.</h2><h2 id="h">!</h2><h2 id="l">></h2><h2 id="EV">EV</h2></span>
+
+        
+        <label for="menu-toggle" class="menu-icon-label">
+            <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path fill="#004183" d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/>
+            </svg>
+        </label>
+
+
+    </nav>
+            <div class="menu">
+        <a href="{% url 'main' %}" hx-trigger="click" hx-target="body" hx-get="{% url 'main' %}" hx-push-url="{% url 'main' %}"><h3 class="home">Home</h3></a>
+        <a href="{% url 'about' %}" hx-trigger="click" hx-target="body" hx-get="{% url 'about' %}" hx-push-url="{% url 'about' %}"><h3 class="about">About</h3></a>
+        <a href="{% url 'skills-and-projects' %}" hx-trigger="click" hx-target="body" hx-get="{% url 'skills-and-projects' %}" hx-push-url="{% url 'skills-and-projects' %}"><h3 class="skills-and-projects">Skills&Projects</h3></a>
+        <a href="{% url 'contact' %}" hx-trigger="click" hx-target="body" hx-get="{% url 'contact' %}" hx-push-url="{% url 'contact' %}"><h3 class="contact">Contact</h3></a>
+        </div>
+
+    {% block content %}
+    {% endblock content %}
+    <script src="https://unpkg.com/htmx.org@1.9.2"></script>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<div class="title-container1"><h1 class="curly-braces">{</h1><h1 class="title">some tools and technologies I've used</h1><h1 class="curly-braces">}</h1></div>
+
+<div class="skills-section">
+    <span class="portal-circles"></span><div class="skills-container">
+
+  <div class="skills-track" id="skillsTrack">
+    {% for skill in skills %}
+      <div class="skill-icon">
+        <img src="{{ skill.icon.url }}" alt="{{ skill.name }}">
+      </div>
+    {% endfor %}
+  </div>
+
+    </div><span class="portal-circles"></span>
+</div>
+
+<div class="title-container" style="top: 18rem;"><h1 class="curly-braces">{</h1><h1 class="title">projects</h1><h1 class="curly-braces">}</h1></div>
+
+<div class="projects-section">
+  {% for project in projects %}
+    <a href="{{project.link}}"><div class="project-box">
+      <img id="project-image" src="{{ project.thumbnail.url }}">
+      <h3 id="project-name">{{project.name}}</h3>
+    </div></a>
+  {% endfor %}
+</div>
+
+
+<script>
+  const track = document.getElementById('skillsTrack');
+  const parent = track.parentNode;
+  const clone = track.cloneNode(true);
+  parent.appendChild(clone);
+</script>
+
+
+<!-- <div class="title-container"><h1 class="curly-braces">{</h1><h1 class="title">some projects I've worked on</h1><h1 class="curly-braces">}</h1></div> -->
+
+{% endblock content %}
