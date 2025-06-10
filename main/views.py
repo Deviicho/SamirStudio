@@ -6,7 +6,8 @@ from decouple import config
 contact_email = config("CONTACT_EMAIL")
 
 def main(request):
-    context = {}
+    profile = models.Image.objects.filter(is_theOne=True).first()
+    context = {'profile' : profile}
     return render(request , 'main/home.html' , context)
 
 def about(request):

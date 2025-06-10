@@ -8,3 +8,7 @@ class Project(models.Model):
     name = models.CharField(max_length=150)
     thumbnail = models.ImageField(upload_to='projects/')
     link = models.CharField(max_length=300 , null=True)
+    
+class Image(models.Model):
+    image = models.ImageField(upload_to='images/')
+    is_theOne = models.BooleanField(default=False)
