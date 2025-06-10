@@ -1,1 +1,1 @@
-web: gunicorn MDPortfolio.wsgi --bind 0.0.0.0:$PORT
+web: gunicorn MDPortfolio.wsgi --log-file -
