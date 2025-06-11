@@ -157,7 +157,9 @@ CLOUDINARY_STORAGE = {
 
 MEDIA_URL = f"https://res.cloudinary.com/{config('CLOUDINARY_CLOUD_NAME')}/"
 
-
+CSRF_TRUSTED_ORIGINS = [
+    "https://michel-dev.up.railway.app",
+]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
