@@ -10,11 +10,33 @@
     <span class="portal-circles"></span><div class="skills-container">
 
   <div class="skills-track" id="skillsTrack">
-    {% for skill in skills %}
       <div class="skill-icon">
-        <img src="{{ skill.icon.url }}" alt="{{ skill.name }}">
+        <img src="{% static 'images/icons8-python-48.png' %}" alt="python">
       </div>
-    {% endfor %}
+      <div class="skill-icon">
+        <img src="{% static 'images/icons8-selenium-48.png' %}" alt="selenium">
+      </div>
+      <div class="skill-icon">
+        <img src="{% static 'images/icons8-html5-48.png' %}" alt="html">
+      </div>
+      <div class="skill-icon">
+        <img src="{% static 'images/icons8-css3-48.png' %}" alt="css">
+      </div>
+      <div class="skill-icon">
+        <img src="{% static 'images/icons8-django-24.png' %}" alt="django">
+      </div>
+      <div class="skill-icon">
+        <img src="{% static 'images/htmx-logo-png_seeklogo-554504-removebg-preview.png' %}" alt="htmx">
+      </div>
+      <div class="skill-icon">
+        <img src="{% static 'images/icons8-figma-48.png' %}" alt="figma">
+      </div>
+      <div class="skill-icon">
+        <img src="{% static 'images/download-removebg-preview.png' %}" alt="beautifulsoup">
+      </div>
+      <div class="skill-icon">
+        <img src="{% static 'images/icons8-git-branch-64.png' %}" alt="git">
+      </div>
   </div>
 
     </div><span class="portal-circles"></span>
@@ -25,7 +47,7 @@
 <div class="projects-section">
   {% for project in projects %}
     <a href="{{project.link}}"><div class="project-box">
-      <img id="project-image" src="{{ project.thumbnail.url }}">
+      <img id="project-image" src="{% static 'images/signup-page sportify.png' %}">
       <h3 id="project-name">{{project.name}}</h3>
     </div></a>
   {% endfor %}

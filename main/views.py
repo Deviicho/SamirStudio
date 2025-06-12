@@ -6,8 +6,8 @@ from decouple import config
 contact_email = config("CONTACT_EMAIL")
 
 def main(request):
-    profile = models.Image.objects.filter(is_theOne=True).first()
-    context = {'profile' : profile}
+    # profile = models.Image.objects.filter(is_theOne=True).first()
+    context = {}
     return render(request , 'main/home.html' , context)
 
 def about(request):
@@ -15,10 +15,10 @@ def about(request):
     return render(request , 'main/about.html' , context)
 
 def skills_and_projects(request):
-    skills = models.Skill.objects.all()
+    # skills = models.Skill.objects.all()
     projects = models.Project.objects.all()
     
-    context = {'skills' : skills ,
+    context = {
                'projects' : projects,
                }
     
