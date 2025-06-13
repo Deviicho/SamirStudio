@@ -46,7 +46,7 @@
 
 <div class="projects-section">
   {% for project in projects %}
-    <a href="{{project.link}}"><div class="project-box">
+    <a href="{{project.link}}" target="_blank" rel="noopner noreferrer"><div class="project-box">
       <img id="project-image" src="{% static 'images/projects-thumbnail.png' %}">
       <h3 id="project-name">{{project.name}}</h3>
     </div></a>
