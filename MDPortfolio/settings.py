@@ -144,7 +144,7 @@ MIDDLEWARE += ['main.middleware.DiscordNotificationMiddleware']
 
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://michel-dev.up.railway.app",
+    "https://michel-dev.up.railway.app"
 ]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
