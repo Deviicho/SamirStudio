@@ -1,12 +1,3 @@
-fix the mobile overlay problem   ✔
-see how to link the svg click action with the menu slide  ✔
-discover what to type in the home page introduction and the about section (with chatgpt) ✔
-type what you learned ✔
-link all the pages together ✔
-bonus: learn how to make your projects and skills slide automatically ✔✔
-finally make it adaptive to laptop , mobile and tablet ✔ ✔ ✔ ✔
-
-
-search for doable cool project ideas that can be put in your portfolio 
-change the used gmail and use the michel.dev one for clean inbox
-make the security things reactivate the middleware discord and settings middleware then deploy
+notes:
+for the about page: make it a pronted photo frame
+for the work page : make every category a video cassette and when the user opens one of them it shows a tape that handles videos (try to make it manually)
