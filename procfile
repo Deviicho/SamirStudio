@@ -1,1 +1,1 @@
-web: gunicorn MDPortfolio.wsgi --log-file -
+web: gunicorn SamirStudio.wsgi --log-file -

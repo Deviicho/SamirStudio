@@ -1,3 +1,6 @@
 notes:
 for the about page: make it a pronted photo frame
 for the work page : make every category a video cassette and when the user opens one of them it shows a tape that handles videos (try to make it manually)
+
+next steps:
+modify the views , urls and anything related to pages names
