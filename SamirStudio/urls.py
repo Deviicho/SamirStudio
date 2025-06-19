@@ -18,6 +18,20 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls.static import static
 from django.conf import settings
+from django.http import JsonResponse
+from django.db import connection
+
+def dbcheck(request):
+    try:
+        with connection.cursor() as cursor:
+            cursor.execute("SELECT 1;")
+        return JsonResponse({"db": "ok"})
+    except Exception as e:
+        return JsonResponse({"db": "error", "detail": str(e)})
+
+urlpatterns += [
+    path("dbcheck/", dbcheck)
+]
 
 urlpatterns = [
     path('admin/', admin.site.urls),

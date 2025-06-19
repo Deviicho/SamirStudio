@@ -1,1 +1,1 @@
-web: gunicorn SamirStudio.wsgi --bind 0.0.0.0:$PORT --log-file - --log-level debug
+web: gunicorn SamirStudio.wsgi --log-file -
