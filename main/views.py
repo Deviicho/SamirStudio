@@ -2,6 +2,7 @@ from django.shortcuts import render
 from . import models
 from django.core.mail import send_mail
 from decouple import config
+from django.shortcuts import get_object_or_404
 
 contact_email = config("CONTACT_EMAIL")
 
@@ -14,8 +15,16 @@ def about(request):
     return render(request , 'main/about.html' , context)
 
 def work(request):
-    context = {}
+    categories = models.Category.objects.all()
+    context = {'categories' : categories}
     return render(request , 'main/work.html' , context)
+
+def tapes(request , category_id):
+    category = get_object_or_404(models.Category , id=category_id)
+    videos = category.videos.all()
+    context = {'category' : category,
+                'videos' : videos}
+    return render(request , 'main/tapes.html' , context)
 
 def contact(request):
     success = False

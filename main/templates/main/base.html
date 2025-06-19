@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 {% load static %}
-<html lang="en">
+<html lang="en" translate="no">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <link rel="icon" sizes='192x192' href="{% static 'images/SS_logo.png' %}">
+    <link rel="icon" style="transform: rotate(270deg);" sizes='192x192' href="{% static 'images/SS_logo.png' %}">
 
     <title>SamirStudio</title>
 </head>
@@ -14,7 +14,7 @@
     <input type="checkbox" id="menu-toggle" hidden>
 
     <nav class="navbar">
-        <img class="logo-name" src="{% static 'images/SS_logo.png' %}">
+        <a href="{% url 'main' %}" hx-trigger="click" hx-target="body" hx-get="{% url 'main' %}" hx-push-url="{% url 'main' %}"><img class="logo-name" src="{% static 'images/SS_logo.png' %}"></a>
 
         
         <label for="menu-toggle" class="menu-icon-label">

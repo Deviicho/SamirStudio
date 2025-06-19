@@ -1,0 +1,23 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+
+
+
+{% block content %}
+    <h1 class="main-title">{{category.name}}</h1>
+
+    <div class="cassette-tape">
+    {% for video in videos %}
+        <div class="tape-box">
+        <div class="tape-right-side"><div class="tape-side-square"></div><div class="tape-side-square"></div><div class="tape-side-square"></div></div>
+        <video class="video" controls>
+        <source  src="{{ video.video_file.url }}" type="video/mp4">
+        </video>
+        <div class="tape-left-side"><div class="tape-side-square"></div><div class="tape-side-square"></div><div class="tape-side-square"></div></div>
+        </div>
+    {% endfor %}
+
+    </div>
+
+{% endblock content %}
