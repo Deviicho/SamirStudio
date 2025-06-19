@@ -157,9 +157,10 @@ EMAIL_HOST_PASSWORD = config("EMAIL_HOST_PASSWORD")
 # MIDDLEWARE += ['main.middleware.DiscordNotificationMiddleware']  thats for discord notifications
 
 
-# CSRF_TRUSTED_ORIGINS = [
-#     "https://michel-dev.up.railway.app"
-# ]
+CSRF_TRUSTED_ORIGINS = [
+    "https://samirstudio-production.up.railway.app",
+    "http://127.0.0.1:8000",
+]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
